@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korallo | Dive into the Koralverse</title>
+    <meta name="description" content="Korallo (KRLO) — un ecosistema DeFi su BNB Chain, trasparente e community-first.">
+    <meta name="krlo:token" content="0x26b3673b716feb8edcc2338ced9cf937c76da620" />
+    <meta name="krlo:pair"  content="0x47494a0fc662c335ed579e18755bdef6746379ae" />
+
+    <link rel="icon" href="./logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="koral-style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVCYNHHY10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GVCYNHHY10');
+    </script>
+    
+    <script src="koral-app.js" type="module" defer></script>
+</head>
+<body>
+    <div id="koral-background" class="koral-background"></div>
+
+    <header class="koral-header">
+        <div class="header-content">
+            <a href="#hero" class="koral-brand"><img src="./logo.png" alt="Korallo Logo"><span>KORALLO</span></a>
+            <nav class="koral-nav" id="koral-nav-menu">
+                <a href="#dashboard" data-key="navDashboard">Dashboard</a>
+                <a href="#staking" data-key="navStake">Stake</a>
+                <a href="#community" data-key="navCommunity">Community</a>
+                <a href="#faq" data-key="navFaq">FAQ</a>
+                <a href="./airdrop.html" data-key="navAirdrop">Airdrop</a>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="it">IT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="koral-button secondary connect-wallet-btn" id="btn-connect-main" data-key="connectWallet">Connect Wallet</button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Apri menu"><span class="hamburger"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="info-ribbon" role="status">
+        <span data-key="ribbonLock">🔒 Liquidità Bloccata 99.5%</span> — 
+        <a id="lnkMudra" href="#" target="_blank" rel="noopener" data-key="ribbonMudra">Certificato Mudra</a>
+    </div>
+
+    <main class="koral-main">
+        <section id="hero" class="koral-section hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title glitch" data-text="Dive into the Koralverse" data-key="heroTitle">Dive into the Koralverse</h1>
+                <p class="hero-subtitle" data-key="heroSubtitle">"Dove le correnti della finanza incontrano le profondità della community. Esplora l'oceano decentralizzato."</p>
+                <div class="hero-cta-group">
+                    <a href="#staking" class="koral-button primary animate-pulse" data-key="heroCtaPrimary">Inizia lo Staking</a>
+                    <a href="#dashboard" class="koral-button secondary" data-key="heroCtaSecondary">Esplora Dati</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="koral-section">
+            <h2 class="section-title animate-on-scroll" data-key="dashboardTitle">Koral-Dashboard</h2>
+            <p class="section-subtitle animate-on-scroll" data-key="dashboardSubtitle">I dati del Koralverse, in tempo reale.</p>
+            <div class="koral-grid three-cols">
+                <div id="card-price" class="koral-card data-card animate-on-scroll">
+                    <h3 data-key="kpiPrice">Prezzo</h3><p class="data-value" id="kpi-price">—</p><p class="data-sub" id="liveChange">—</p>
+                </div>
+                <div class="koral-card data-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <h3 data-key="kpiLiquidity">Liquidità</h3><p class="data-value" id="kpi-liq">—</p><p class="data-sub" id="liveFDV">FDV —</p>
+                </div>
+                <div class="koral-card data-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <h3 data-key="kpiVolume">Volume 24h</h3><p class="data-value" id="kpi-vol">—</p><p class="data-sub" id="liveTxns">Txns 24h: —</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="actions" class="koral-section">
+             <h2 class="section-title animate-on-scroll" data-key="actionsTitle">Azioni Rapide</h2>
+             <div class="koral-grid two-cols">
+                <div class="koral-card animate-on-scroll">
+                    <h3 data-key="tradeTitle">Trade & Pool</h3>
+                    <p data-key="tradeText">Scambia KRLO o fornisci liquidità per guadagnare fees sulla nostra piattaforma partner.</p>
+                    <div class="hero-cta-group" style="margin-top: 1rem;">
+                        <a id="btnSwap" href="#" target="_blank" rel="noopener" class="koral-button primary" data-key="tradeButton">Swap KRLO</a>
+                        <a id="btnAddLiq" href="#" target="_blank" rel="noopener" class="koral-button secondary" data-key="poolButton">Add Liquidity</a>
+                    </div>
+                </div>
+                <div class="koral-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <h3 data-key="aboutTitle">About Korallo</h3>
+                    <p data-key="aboutText">Korallo è un ecosistema DeFi sulla BNB Chain, progettato per trasparenza, sicurezza e crescita organica, ispirato alla resilienza della barriera corallina.</p>
+                </div>
+             </div>
+        </section>
+
+        <section id="staking" class="koral-section">
+            <h2 class="section-title animate-on-scroll" data-key="stakeTitle">Koral-Stake</h2>
+            <p class="section-subtitle animate-on-scroll" data-key="stakeSubtitle">"La pazienza è il seme da cui sboccia l'abbondanza."</p>
+            <div class="koral-dapp-container animate-on-scroll">
+                <div class="koral-dapp-card">
+                    <h3 data-key="stakePoolStats">Statistiche Pool</h3>
+                    <ul class="stat-list"><li>TVL (Staked): <strong id="tvl">-</strong> KRLO</li><li>APR Stimato: <strong id="apr">-</strong></li><li>Tempo Rimanente: <strong id="timeLeft">-</strong></li></ul>
+                    <div id="notifications" class="notifications-area"></div>
+                </div>
+                <div class="koral-dapp-card">
+                    <h3 data-key="stakeYourAccount">Il Tuo Account</h3>
+                    <ul class="stat-list"><li>Saldo KRLO: <strong id="bal">-</strong></li><li>In Stake: <strong id="myStake">-</strong></li><li>Guadagnati: <strong id="myEarned">-</strong></li><li>Allowance: <strong id="allow">-</strong> KRLO</li></ul>
+                </div>
+                <div class="koral-dapp-card action-card">
+                    <h3 data-key="stakeStake">Stake</h3>
+                    <input id="amtStake" type="number" min="0" data-key="stakeAmount" placeholder="Quantità KRLO" class="dapp-input">
+                    <div class="dapp-buttons"><button class="koral-button secondary" id="btnApprove" data-key="approveButton">Approve</button><button class="koral-button primary" id="btnStake" data-key="stakeButton">Stake</button></div>
+                </div>
+                <div class="koral-dapp-card action-card">
+                    <h3 data-key="stakeUnstakeClaim">Unstake & Claim</h3>
+                    <input id="amtUnstake" type="number" min="0" data-key="stakeAmount" placeholder="Quantità KRLO" class="dapp-input">
+                     <div class="dapp-buttons"><button class="koral-button secondary" id="btnUnstake" data-key="unstakeButton">Unstake</button><button class="koral-button primary" id="btnClaim" data-key="claimButton">Claim</button></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="koral-section">
+            <h2 class="section-title animate-on-scroll" data-key="communityTitle">Community & Risorse</h2>
+            <div class="koral-grid three-cols">
+                <div class="koral-card animate-on-scroll">
+                    <h3 data-key="tokenContractTitle">Contratto Token</h3>
+                    <p class="mono">0x26b3673b716feb8edcc2338ced9cf937c76da620</p>
+                    <button class="koral-button primary" id="copy-btn" data-key="copyButton">Copia Indirizzo</button>
+                </div>
+                <div class="koral-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <h3 data-key="socialTitle">Seguici</h3>
+                    <div class="social-icons">
+                        <a href="https://x.com/KoralloSpace" target="_blank" rel="noopener" aria-label="Seguici su X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+                        <a href="https://t.me/KoralloCommunity" target="_blank" rel="noopener" aria-label="Unisciti su Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.08l16.1-5.69c.75-.26 1.45.14 1.2 1.1l-1.97 9.28c-.22.92-.86 1.14-1.59.7l-4.15-3.05-1.97 1.9c-.23.23-.42.42-.83.42z"></path></svg></a>
+                    </div>
+                </div>
+                <div class="koral-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <h3 data-key="referralTitle">Shill Raid Contest</h3>
+                    <p data-key="referralText">Crea il tuo link referral e vinci! Aggiungi `?ref=TUONOME` all'URL del sito e condividilo ovunque.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="koral-section">
+            <h2 class="section-title animate-on-scroll" data-key="faqTitle">Domande Frequenti</h2>
+            <div class="accordion-group animate-on-scroll">
+                <div class="accordion-item"><button class="accordion-header" data-key="faq1Title">Cos'è KRLO?</button><div class="accordion-content"><p data-key="faq1Text"></p></div></div>
+                <div class="accordion-item"><button class="accordion-header" data-key="faq2Title">Come posso acquistare KRLO?</button><div class="accordion-content"><p data-key="faq2Text"></p></div></div>
+                <div class="accordion-item"><button class="accordion-header" data-key="faq3Title">Qual è la tokenomics?</button><div class="accordion-content"><p data-key="faq3Text"></p></div></div>
+            </div>
+        </section>
+<section id="transparency" class="koral-section">
+  <h2 class="section-title">Transparency</h2>
+  <p class="section-subtitle">We build patiently, with the community at the center.</p>
+
+  <div class="koral-grid two-cols">
+    <div class="koral-card">
+      <h3>Community-driven</h3>
+      <p>Korallo grows organically through real users and contributors. No paid shill/raid services.</p>
+    </div>
+
+    <div class="koral-card">
+      <h3>Future DAO governance</h3>
+      <p>The roadmap includes a DAO where the community will vote on key proposals and budgets. See the Whitepaper.</p>
+    </div>
+
+    <div class="koral-card">
+      <h3>Locked Liquidity</h3>
+      <p>99.5% liquidity locked (99,500,000 KRLO). View the <a id="lnkMudra" target="_blank" rel="noopener">Mudra Certificate</a>.</p>
+    </div>
+
+    <div class="koral-card">
+      <h3>Official Contacts</h3>
+      <p><strong>Email:</strong> <a href="mailto:info@korallo.space">info@korallo.space</a><br>
+         <strong>GitHub:</strong> <a href="https://github.com/korallospace-IT" target="_blank" rel="noopener">github.com/korallo-space</a></p>
+      <p class="section-subtitle" style="margin-top:.5rem">We submit explorer updates only from @korallo.space addresses.</p>
+    </div>
+  </div>
+</section>
+
+        <section id="whitepaper" class="koral-section">
+            <h2 class="section-title animate-on-scroll" data-key="whitepaperTitle">Whitepaper</h2>
+            <p class="section-subtitle animate-on-scroll" data-key="whitepaperText">"La trasparenza è l'acqua limpida in cui prospera il reef."</p>
+            <a href="./whitepaper.pdf" target="_blank" rel="noopener" class="koral-button primary animate-on-scroll" data-key="whitepaperButton">Leggi il Whitepaper (PDF)</a>
+        </section>
+    </main>
+    
+    <footer class="koral-footer">
+      <p>© 2025 Korallo. <span data-key="footerText">Costruito per un futuro decentralizzato.</span></p>
+    </footer>
+</body>
+</html>

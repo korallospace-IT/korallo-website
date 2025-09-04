@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korallo | Airdrop Reef</title>
+    <link rel="icon" href="./logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="koral-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" defer></script>
+    <script src="airdrop-app.js" defer></script>
+</head>
+<body>
+    <div id="koral-background" class="koral-background"></div>
+    <header class="koral-header">
+        <div class="header-content">
+            <a href="./index.html" class="koral-brand"><img src="./logo.png" alt="Korallo Logo"><span>KORALLO</span></a>
+            <nav class="koral-nav" id="koral-nav-menu">
+                <a href="./index.html#dashboard" data-key="navDashboard">Dashboard</a>
+                <a href="./index.html#staking" data-key="navStake">Stake</a>
+                <a href="./index.html" data-key="navHome">Home</a>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="it">IT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Apri menu"><span class="hamburger"></span></button>
+            </div>
+        </div>
+    </header>
+    <main class="koral-main">
+        <section id="airdrop" class="koral-section hero-section">
+            <h2 class="section-title" data-key="airdropTitle">Airdrop Reef</h2>
+            <p class="section-subtitle" data-key="airdropSubtitle">"Un frammento di reef per chi decide di immergersi."</p>
+            <div class="koral-dapp-card airdrop-card">
+                <p class="notice" data-key="airdropNotice">Connetti il wallet su BNB Chain e ricevi la tua ricompensa. Un airdrop, una promessa: crescere insieme.</p>
+                <div class="hero-cta-group">
+                    <button id="btnConnect" class="koral-button primary" data-key="btn_connect">Connetti Wallet</button>
+                    <button id="btnClaim" class="koral-button secondary" data-key="btn_claim" disabled>Richiedi Airdrop</button>
+                    <button id="btnSwitch" class="koral-button secondary" data-key="btn_switch" style="display:none">Passa a BNB Chain</button>
+                </div>
+                <div class="koral-grid three-cols" style="margin-top: 2rem;">
+                    <div class="koral-card data-card airdrop-kpi"><h3 data-key="kpi_network">Rete</h3><p class="data-value" id="kpiNetwork">—</p></div>
+                    <div class="koral-card data-card airdrop-kpi"><h3 data-key="kpi_address">Indirizzo</h3><p class="data-value" id="kpiAddress">—</p></div>
+                    <div class="koral-card data-card airdrop-kpi"><h3 data-key="kpi_state">Stato</h3><p class="data-value" id="kpiState">—</p></div>
+                </div>
+                <div id="status" class="notifications-area airdrop-status"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
